@@ -1,0 +1,10 @@
+{
+  "name": "basic_e2e_testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^8.7.0",
+    "superstatic": "^7.1.0"
+  }
+}
