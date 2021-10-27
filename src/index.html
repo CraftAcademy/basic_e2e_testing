@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Hello mars</h1>
-  <h3>My first test is going green</h3>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello mars</h1>
+    <h3>My first test is going green</h3>
+    <input type="text" name="firstName" />
+    <input type="text" name="email" />
+    <input type="password" name="password" />
+    <input type="submit" value="Register" id="submit-button" />
+    <div id="confirmation-message"></div>
+
+    <script>
+      const emailInput = document.querySelector("input[name=email]");
+      const button = document.getElementById("submit-button");
+      const messageElement = document.getElementById("confirmation-message");
+      button.addEventListener("click", () => {
+        if (emailInput.value === '') {
+          messageElement.innerText =
+            "Hey! You need to give us your email address!";
+        } else {
+          // we would make a network call to the system that creates accounts...
+          messageElement.innerText = "Thank you for signing up!";
+        }
+      });
+    </script>
+  </body>
 </html>
